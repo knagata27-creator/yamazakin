@@ -166,6 +166,21 @@ p {
 /* ロゴ */
 .site-logo {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.2;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  display: flex;
   flex-direction: column;
   line-height: 1.2;
 }
@@ -181,7 +196,7 @@ p {
 .logo-sub {
   font-size: 0.6875rem;
   color: var(--color-text-muted);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
 }
 
 /* ナビゲーション */
@@ -599,21 +614,6 @@ p {
   flex-shrink: 0;
 }
 
-/* BASE ウィジェット埋め込みエリア */
-.base-widget-area {
-  margin: 40px 0;
-  padding: 32px;
-  background: var(--color-bg-warm);
-  border: 1px dashed var(--color-border);
-  border-radius: var(--radius);
-  text-align: center;
-}
-
-.base-widget-placeholder {
-  color: var(--color-text-muted);
-  font-size: 0.875rem;
-}
-
 /* ============================================================
    ご注文方法
    ============================================================ */
@@ -648,6 +648,11 @@ p {
 .step-desc {
   font-size: 0.875rem;
   color: var(--color-text-muted);
+}
+
+.step-desc a {
+  color: var(--color-primary);
+  text-decoration: underline;
 }
 
 .info-table {
@@ -764,6 +769,90 @@ p {
 }
 
 /* ============================================================
+   旬の果物カレンダー (season-grid)
+   ============================================================ */
+.season-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.season-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.season-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.season-fruit {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.season-period {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 3px 12px;
+  border-radius: 20px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* 月バー */
+.season-months-bar {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3px;
+  margin-bottom: 14px;
+}
+
+.month-cell {
+  text-align: center;
+  font-size: 0.6875rem;
+  line-height: 1;
+  padding: 6px 0;
+  border-radius: 3px;
+  background: var(--color-bg-warm);
+  color: var(--color-text-muted);
+}
+
+.month-cell.active {
+  color: #fff;
+  font-weight: 600;
+}
+
+.season-note {
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* 果物ごとのアクセントカラー */
+.season-card--grape  .season-period,
+.season-card--grape  .month-cell.active { background: #4a2060; }
+
+.season-card--apple  .season-period,
+.season-card--apple  .month-cell.active { background: var(--color-primary); }
+
+.season-card--cherry .season-period,
+.season-card--cherry .month-cell.active { background: #b5223e; }
+
+.season-card--kaki   .season-period,
+.season-card--kaki   .month-cell.active { background: #c96a00; }
+
+/* ============================================================
    品種グリッド
    ============================================================ */
 .variety-section {
@@ -784,6 +873,10 @@ p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+}
+
+.variety-grid--3col {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .variety-card {
@@ -1106,6 +1199,69 @@ p {
 .mb-32 { margin-bottom: 32px; }
 
 /* ============================================================
+   ページトップへ戻るボタン
+   ============================================================ */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.125rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, background var(--transition);
+  z-index: 90;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background: var(--color-primary-dk);
+}
+
+/* ============================================================
+   商品ページ：ジャンプリンク目次
+   ============================================================ */
+.product-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 0 auto 40px;
+}
+
+.product-toc a {
+  display: inline-block;
+  padding: 8px 24px;
+  border: 1px solid var(--color-primary);
+  border-radius: 20px;
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition);
+}
+
+.product-toc a:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* ============================================================
    レスポンシブ（スマートフォン対応）
    ============================================================ */
 @media (max-width: 768px) {
@@ -1150,9 +1306,11 @@ p {
     font-size: 1rem;
   }
 
-  .nav-shop-btn {
+  .site-nav .nav-shop-btn {
     margin-top: 24px;
-    display: inline-block;
+    display: block;
+    text-align: center;
+    padding: 14px 20px;
   }
 
   /* ヒーロー */
@@ -1204,6 +1362,21 @@ p {
 
   .about-hero-text h1 {
     font-size: 1.625rem;
+  }
+
+  /* 季節カレンダー */
+  .season-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .season-card {
+    padding: 20px;
+  }
+
+  .month-cell {
+    font-size: 0.625rem;
+    padding: 5px 0;
   }
 
   .values-grid {
@@ -1271,6 +1444,26 @@ p {
   /* ページヒーロー */
   .page-hero-title {
     font-size: 1.5rem;
+  }
+
+  /* お問い合わせ intro：モバイルは左揃えに */
+  .contact-intro {
+    text-align: left;
+  }
+
+  /* 品種カード名：モバイルで折り返し抑制 */
+  .variety-name {
+    font-size: 0.875rem;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  /* ページトップボタン：モバイルは少し内側に */
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
   }
 }
 

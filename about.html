@@ -3,21 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="山嵜農園について。長野県で果樹を育てる農家の想いやこだわりをご紹介します。">
+  <meta name="description" content="山嵜農園について。長野県須坂市日滝で果樹を育てる農家の想いやこだわりをご紹介します。">
   <title>農園について | 山嵜農園</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/reset.css?v=20260532">
+  <link rel="stylesheet" href="css/style.css?v=20260532">
 </head>
 <body>
 
   <header class="site-header">
     <div class="container">
       <a href="index.html" class="site-logo">
-        <span class="logo-main">山嵜農園</span>
-        <span class="logo-sub">長野県 果樹農家</span>
+        <img src="images/logo.png" alt="山嵜農園" class="logo-img">
+        <div class="logo-text">
+          <span class="logo-main">山嵜農園</span>
+          <span class="logo-sub">長野県須坂市日滝</span>
+        </div>
       </a>
       <nav class="site-nav" id="site-nav" aria-label="メインナビゲーション">
         <ul>
@@ -47,12 +51,12 @@
           <span class="section-label">About Us</span>
           <h1>長野の大地で育てる、<br>信州の果物。</h1>
           <p>
-            山嵜農園は、長野県の豊かな自然のなかで果樹を育てています。
+            山嵜農園は、長野県須坂市日滝の豊かな自然のなかで果樹を育てています。
             四季折々の気候と信州の清らかな水・空気が、
             味わい深い果物を育んでいます。
           </p>
           <p>
-            さくらんぼ・ぶどう・りんご・柿、それぞれの果物が
+            ぶどう・りんご・さくらんぼ・柿、それぞれの果物が
             一番おいしい季節に、収穫したばかりをお届けします。
           </p>
         </div>
@@ -127,8 +131,8 @@
             <span class="section-label">Our Story</span>
             <h2 id="history-heading">農園について</h2>
             <p>
-              山嵜農園は長野県で果樹を育てています。
-              この地の気候と土壌が、さくらんぼ・ぶどう・りんご・柿を
+              山嵜農園は長野県須坂市日滝で果樹を育てています。
+              この地の気候と土壌が、ぶどう・りんご・さくらんぼ・柿を
               育てるのに適しており、季節ごとに旬の果物をお届けしています。
             </p>
             <p>
@@ -150,37 +154,101 @@
           <p class="section-desc">それぞれの果物が一番おいしい季節にお届けします。</p>
         </div>
 
-        <table class="info-table">
-          <thead>
-            <tr>
-              <th scope="col" style="background:var(--color-primary);color:#fff;">果物</th>
-              <th scope="col" style="background:var(--color-primary);color:#fff;">収穫・発送時期</th>
-              <th scope="col" style="background:var(--color-primary);color:#fff;">特徴</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>ぶどう</strong></td>
-              <td>8月〜10月</td>
-              <td>シャインマスカット・ナガノパープル・クイーンニーナ・巨峰など複数品種を栽培。品種ごとに異なる風味をお楽しみいただけます。</td>
-            </tr>
-            <tr>
-              <td><strong>りんご</strong></td>
-              <td>10月〜11月</td>
-              <td>ふじ・秋映・シナノゴールドなど信州を代表する品種を栽培。甘みと酸味のバランスに優れています。</td>
-            </tr>
-            <tr>
-              <td><strong>さくらんぼ</strong></td>
-              <td>6月〜7月</td>
-              <td>甘みと酸味のバランスが絶妙。贈り物にも人気です。</td>
-            </tr>
-            <tr>
-              <td><strong>柿</strong></td>
-              <td>10月〜11月</td>
-              <td>秋の深まりとともに熟す、甘みの強い柿です。</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="season-grid">
+
+          <!-- ぶどう -->
+          <div class="season-card season-card--grape">
+            <div class="season-card-head">
+              <h3 class="season-fruit">ぶどう</h3>
+              <span class="season-period">8月〜10月</span>
+            </div>
+            <div class="season-months-bar" aria-label="収穫時期：8月〜10月">
+              <span class="month-cell">1</span>
+              <span class="month-cell">2</span>
+              <span class="month-cell">3</span>
+              <span class="month-cell">4</span>
+              <span class="month-cell">5</span>
+              <span class="month-cell">6</span>
+              <span class="month-cell">7</span>
+              <span class="month-cell active">8</span>
+              <span class="month-cell active">9</span>
+              <span class="month-cell active">10</span>
+              <span class="month-cell">11</span>
+              <span class="month-cell">12</span>
+            </div>
+            <p class="season-note">シャインマスカット・ナガノパープル・クイーンニーナ・巨峰など複数品種を栽培。品種ごとに異なる風味をお楽しみいただけます。</p>
+          </div>
+
+          <!-- りんご -->
+          <div class="season-card season-card--apple">
+            <div class="season-card-head">
+              <h3 class="season-fruit">りんご</h3>
+              <span class="season-period">10月〜11月</span>
+            </div>
+            <div class="season-months-bar" aria-label="収穫時期：10月〜11月">
+              <span class="month-cell">1</span>
+              <span class="month-cell">2</span>
+              <span class="month-cell">3</span>
+              <span class="month-cell">4</span>
+              <span class="month-cell">5</span>
+              <span class="month-cell">6</span>
+              <span class="month-cell">7</span>
+              <span class="month-cell">8</span>
+              <span class="month-cell">9</span>
+              <span class="month-cell active">10</span>
+              <span class="month-cell active">11</span>
+              <span class="month-cell">12</span>
+            </div>
+            <p class="season-note">ふじ・秋映・シナノゴールドなど信州を代表する品種を栽培。甘みと酸味のバランスに優れています。</p>
+          </div>
+
+          <!-- さくらんぼ -->
+          <div class="season-card season-card--cherry">
+            <div class="season-card-head">
+              <h3 class="season-fruit">さくらんぼ</h3>
+              <span class="season-period">6月〜7月</span>
+            </div>
+            <div class="season-months-bar" aria-label="収穫時期：6月〜7月">
+              <span class="month-cell">1</span>
+              <span class="month-cell">2</span>
+              <span class="month-cell">3</span>
+              <span class="month-cell">4</span>
+              <span class="month-cell">5</span>
+              <span class="month-cell active">6</span>
+              <span class="month-cell active">7</span>
+              <span class="month-cell">8</span>
+              <span class="month-cell">9</span>
+              <span class="month-cell">10</span>
+              <span class="month-cell">11</span>
+              <span class="month-cell">12</span>
+            </div>
+            <p class="season-note">甘みと酸味のバランスが絶妙。贈り物にも人気です。</p>
+          </div>
+
+          <!-- 柿 -->
+          <div class="season-card season-card--kaki">
+            <div class="season-card-head">
+              <h3 class="season-fruit">柿</h3>
+              <span class="season-period">10月〜11月</span>
+            </div>
+            <div class="season-months-bar" aria-label="収穫時期：10月〜11月">
+              <span class="month-cell">1</span>
+              <span class="month-cell">2</span>
+              <span class="month-cell">3</span>
+              <span class="month-cell">4</span>
+              <span class="month-cell">5</span>
+              <span class="month-cell">6</span>
+              <span class="month-cell">7</span>
+              <span class="month-cell">8</span>
+              <span class="month-cell">9</span>
+              <span class="month-cell active">10</span>
+              <span class="month-cell active">11</span>
+              <span class="month-cell">12</span>
+            </div>
+            <p class="season-note">秋の深まりとともに熟す、甘みの強い柿です。</p>
+          </div>
+
+        </div>
 
         <div class="text-center mt-48">
           <a href="products.html" class="btn btn--primary">商品一覧を見る</a>
@@ -196,7 +264,7 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <p class="footer-logo">山嵜農園</p>
-          <p class="footer-tagline">長野の大地が育む、旬の果物をお届けします。<br>さくらんぼ・ぶどう・りんご・柿を栽培しています。</p>
+          <p class="footer-tagline">長野の大地が育む、旬の果物をお届けします。<br>ぶどう・りんご・さくらんぼ・柿を栽培しています。</p>
         </div>
         <nav class="footer-nav" aria-label="フッターナビゲーション">
           <a href="about.html">農園について</a>
@@ -211,6 +279,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=20260532"></script>
+  <button class="back-to-top" id="back-to-top" aria-label="ページトップへ戻る">&#8679;</button>
 </body>
 </html>

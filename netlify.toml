@@ -15,7 +15,7 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
     Content-Security-Policy = """
       default-src 'self';
-      script-src 'self' https://fonts.googleapis.com https://identity.netlify.com;
+      script-src 'self' https://identity.netlify.com;
       style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
       font-src 'self' https://fonts.gstatic.com;
       img-src 'self' data: https:;
@@ -63,6 +63,19 @@
   for = "/*.html"
   [headers.values]
     Cache-Control = "no-cache"
+
+# 内部設定ディレクトリへのアクセスを強制ブロック（多重防御）
+[[redirects]]
+  from = "/.claude/*"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.DS_Store"
+  to = "/index.html"
+  status = 404
+  force = true
 
 # 存在しないページは404へ
 [[redirects]]

@@ -3,21 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="山嵜農園の商品一覧。さくらんぼ・ぶどう・りんご・柿を販売しています。BASEショップよりご購入いただけます。">
+  <meta name="description" content="山嵜農園の商品一覧。ぶどう・りんご・さくらんぼ・柿を販売しています。BASEショップよりご購入いただけます。">
   <title>商品一覧 | 山嵜農園</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/reset.css?v=20260533">
+  <link rel="stylesheet" href="css/style.css?v=20260533">
 </head>
 <body>
 
   <header class="site-header">
     <div class="container">
       <a href="index.html" class="site-logo">
-        <span class="logo-main">山嵜農園</span>
-        <span class="logo-sub">長野県 果樹農家</span>
+        <img src="images/logo.png" alt="山嵜農園" class="logo-img">
+        <div class="logo-text">
+          <span class="logo-main">山嵜農園</span>
+          <span class="logo-sub">長野県須坂市日滝</span>
+        </div>
       </a>
       <nav class="site-nav" id="site-nav" aria-label="メインナビゲーション">
         <ul>
@@ -61,7 +65,14 @@
           </div>
         </div>
 
-        <!-- ============ ぶどう ============ -->
+        <nav class="product-toc" aria-label="商品カテゴリへのジャンプ">
+          <a href="#grape">ぶどう</a>
+          <a href="#apple">りんご</a>
+          <a href="#cherry">さくらんぼ</a>
+          <a href="#kaki">柿</a>
+        </nav>
+
+        <!-- ぶどう -->
         <div class="product-section" id="grape">
           <div class="product-section-inner">
             <div class="product-image product-color-grape">
@@ -135,16 +146,9 @@
               </div>
             </div>
           </div>
-
-          <div class="base-widget-area" style="margin-top:40px;">
-            <p class="base-widget-placeholder">
-              ここにBASEの商品ウィジェットを埋め込めます。<br>
-              <small>BASE管理画面 → デザイン → 商品ウィジェット のコードをここに貼り付けてください。</small>
-            </p>
-          </div>
         </div>
 
-        <!-- ============ りんご ============ -->
+        <!-- りんご -->
         <div class="product-section" id="apple">
           <div class="product-section-inner reverse">
             <div class="product-image product-color-apple">
@@ -174,7 +178,7 @@
           <!-- 品種紹介 -->
           <div class="variety-section">
             <p class="variety-section-title">栽培品種</p>
-            <div class="variety-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="variety-grid variety-grid--3col">
               <div class="variety-card">
                 <div class="variety-img">
                   <img src="images/apple-fuji.jpg" alt="ふじ" loading="lazy">
@@ -207,16 +211,9 @@
               </div>
             </div>
           </div>
-
-          <div class="base-widget-area" style="margin-top:40px;">
-            <p class="base-widget-placeholder">
-              ここにBASEの商品ウィジェットを埋め込めます。<br>
-              <small>BASE管理画面 → デザイン → 商品ウィジェット のコードをここに貼り付けてください。</small>
-            </p>
-          </div>
         </div>
 
-        <!-- ============ さくらんぼ ============ -->
+        <!-- さくらんぼ -->
         <div class="product-section" id="cherry">
           <div class="product-section-inner">
             <div class="product-image product-color-cherry">
@@ -243,16 +240,9 @@
                  class="btn btn--primary">BASEで購入する</a>
             </div>
           </div>
-
-          <div class="base-widget-area" style="margin-top:40px;">
-            <p class="base-widget-placeholder">
-              ここにBASEの商品ウィジェットを埋め込めます。<br>
-              <small>BASE管理画面 → デザイン → 商品ウィジェット のコードをここに貼り付けてください。</small>
-            </p>
-          </div>
         </div>
 
-        <!-- ============ 柿 ============ -->
+        <!-- 柿 -->
         <div class="product-section" id="kaki">
           <div class="product-section-inner reverse">
             <div class="product-image product-color-kaki">
@@ -278,13 +268,6 @@
                  class="btn btn--primary">BASEで購入する</a>
             </div>
           </div>
-
-          <div class="base-widget-area" style="margin-top:40px;">
-            <p class="base-widget-placeholder">
-              ここにBASEの商品ウィジェットを埋め込めます。<br>
-              <small>BASE管理画面 → デザイン → 商品ウィジェット のコードをここに貼り付けてください。</small>
-            </p>
-          </div>
         </div>
 
       </div>
@@ -307,7 +290,7 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <p class="footer-logo">山嵜農園</p>
-          <p class="footer-tagline">長野の大地が育む、旬の果物をお届けします。<br>さくらんぼ・ぶどう・りんご・柿を栽培しています。</p>
+          <p class="footer-tagline">長野の大地が育む、旬の果物をお届けします。<br>ぶどう・りんご・さくらんぼ・柿を栽培しています。</p>
         </div>
         <nav class="footer-nav" aria-label="フッターナビゲーション">
           <a href="about.html">農園について</a>
@@ -322,6 +305,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=20260533"></script>
+  <button class="back-to-top" id="back-to-top" aria-label="ページトップへ戻る">&#8679;</button>
 </body>
 </html>

@@ -42,3 +42,14 @@ if (toggle && nav) {
     });
   });
 }
+
+// ページトップへ戻るボタン
+const backToTop = document.getElementById('back-to-top');
+if (backToTop) {
+  window.addEventListener('scroll', function () {
+    backToTop.classList.toggle('is-visible', window.scrollY > 400);
+  }, { passive: true });
+  backToTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
