@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/reset.css?v=20260532">
-  <link rel="stylesheet" href="css/style.css?v=20260532">
+  <link rel="stylesheet" href="css/reset.css?v=20260533">
+  <link rel="stylesheet" href="css/style.css?v=20260533">
 </head>
 <body>
 
@@ -56,7 +56,7 @@
             旬の果物を<br>お届けします。
           </h1>
           <p class="hero-desc">
-            長野県で代々受け継いできた果樹園。ぶどう・りんご・さくらんぼ・柿を、<br>
+            長野県で代々受け継いできた果樹園。ぶどう・<wbr>りんご・<wbr><span style="white-space:nowrap">さくらんぼ</span>・<wbr>柿を、
             ひとつひとつ丁寧に育てています。
           </p>
           <div class="hero-actions">
@@ -67,11 +67,11 @@
       </div>
     </section>
 
-    <!-- お知らせバー -->
-    <div class="notice-bar" id="notice-bar" hidden>
+    <!-- お知らせバー（非表示にしたい場合は hidden を追加） -->
+    <div class="notice-bar" id="notice-bar">
       <div class="container">
         <span class="notice-tag">お知らせ</span>
-        <p id="notice-text"></p>
+        <p id="notice-text">現在、次の収穫シーズンに向けて準備中です。入荷しましたらBASEショップにてご案内いたします。</p>
       </div>
     </div>
 
@@ -81,7 +81,7 @@
         <div class="section-head">
           <span class="section-label">Our Fruits</span>
           <h2 class="section-title" id="fruits-heading">旬の果物</h2>
-          <p class="section-desc">それぞれの果物が一番おいしい季節に、収穫したばかりをお届けします。</p>
+          <p class="section-desc">それぞれの果物が一番おいしい季節に、<br>収穫したばかりをお届けします。</p>
         </div>
 
         <div class="fruit-grid" role="list">
@@ -194,9 +194,9 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260532"></script>
+  <script src="js/main.js?v=20260533"></script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script src="js/identity-redirect.js?v=20260532"></script>
+  <script src="js/identity-redirect.js?v=20260533"></script>
   <button class="back-to-top" id="back-to-top" aria-label="ページトップへ戻る">&#8679;</button>
 </body>
 </html>

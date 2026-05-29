@@ -84,6 +84,7 @@ p {
   color: var(--color-text-muted);
   max-width: 520px;
   margin: 0 auto;
+  text-wrap: balance;
 }
 
 /* ============================================================
@@ -326,6 +327,7 @@ p {
   max-width: 440px;
   margin-bottom: 40px;
   line-height: 1.9;
+  text-wrap: pretty;
 }
 
 .hero-actions {
@@ -932,6 +934,7 @@ p {
 
 .contact-intro p {
   color: var(--color-text-muted);
+  text-wrap: balance;
 }
 
 .contact-form {
