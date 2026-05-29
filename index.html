@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="山嵜農園は長野県の果樹農家です。さくらんぼ・ぶどう・りんご・柿を育て、旬の味をお届けしています。">
+  <meta name="robots" content="index, follow">
+  <title>山嵜農園 | 長野県の果樹農家</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">
+        <span class="logo-main">山嵜農園</span>
+        <span class="logo-sub">長野県 果樹農家</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="メインナビゲーション">
+        <ul>
+          <li><a href="about.html">農園について</a></li>
+          <li><a href="products.html">商品一覧</a></li>
+          <li><a href="order.html">ご注文方法</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li>
+            <a href="https://yamazaki-noen.base.shop" target="_blank" rel="noopener noreferrer"
+               class="nav-shop-btn">BASEショップへ</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle"
+              aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ヒーロー -->
+    <section class="hero" aria-label="メインビジュアル">
+      <div class="hero-badge" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-body">
+          <span class="hero-label">Yamazaki Noen, Nagano</span>
+          <h1 class="hero-title">
+            <span>長野の大地から、</span>
+            旬の果物を<br>お届けします。
+          </h1>
+          <p class="hero-desc">
+            長野県で代々受け継いできた果樹園。さくらんぼ・ぶどう・りんご・柿を、<br>
+            ひとつひとつ丁寧に育てています。
+          </p>
+          <div class="hero-actions">
+            <a href="products.html" class="btn btn--primary btn--large">商品を見る</a>
+            <a href="about.html" class="btn btn--outline btn--large" style="color:#fff; border-color:rgba(255,255,255,0.6);">農園について</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- お知らせバー -->
+    <div class="notice-bar">
+      <div class="container">
+        <span class="notice-tag">お知らせ</span>
+        <p>2025年のさくらんぼのご予約受付を開始しました。数量限定ですのでお早めにどうぞ。</p>
+      </div>
+    </div>
+
+    <!-- 果物カテゴリ -->
+    <section class="section" aria-labelledby="fruits-heading">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">Our Fruits</span>
+          <h2 class="section-title" id="fruits-heading">旬の果物</h2>
+          <p class="section-desc">それぞれの果物が一番おいしい季節に、収穫したばかりをお届けします。</p>
+        </div>
+
+        <div class="fruit-grid" role="list">
+          <article class="fruit-card" role="listitem">
+            <a href="products.html#cherry" class="fruit-card-link" aria-label="さくらんぼの商品ページへ"></a>
+            <span class="fruit-icon" aria-hidden="true">🍒</span>
+            <p class="fruit-name-jp">さくらんぼ</p>
+            <p class="fruit-name-en">Cherry</p>
+            <span class="fruit-season">6月〜7月</span>
+          </article>
+
+          <article class="fruit-card" role="listitem">
+            <a href="products.html#grape" class="fruit-card-link" aria-label="ぶどうの商品ページへ"></a>
+            <span class="fruit-icon" aria-hidden="true">🍇</span>
+            <p class="fruit-name-jp">ぶどう</p>
+            <p class="fruit-name-en">Grape</p>
+            <span class="fruit-season">8月〜10月</span>
+          </article>
+
+          <article class="fruit-card" role="listitem">
+            <a href="products.html#apple" class="fruit-card-link" aria-label="りんごの商品ページへ"></a>
+            <span class="fruit-icon" aria-hidden="true">🍎</span>
+            <p class="fruit-name-jp">りんご</p>
+            <p class="fruit-name-en">Apple</p>
+            <span class="fruit-season">10月〜11月</span>
+          </article>
+
+          <article class="fruit-card" role="listitem">
+            <a href="products.html#kaki" class="fruit-card-link" aria-label="柿の商品ページへ"></a>
+            <span class="fruit-icon" aria-hidden="true">🟠</span>
+            <p class="fruit-name-jp">柿</p>
+            <p class="fruit-name-en">Persimmon</p>
+            <span class="fruit-season">10月〜11月</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 農園紹介テイザー -->
+    <section class="section section--warm" aria-labelledby="about-teaser-heading">
+      <div class="container">
+        <div class="about-teaser">
+          <div class="about-teaser-image">
+            <!-- 農園の写真をここに設定してください -->
+            <!-- <img src="images/farm.jpg" alt="山嵜農園の風景"> -->
+            <span>農園の写真</span>
+          </div>
+          <div class="about-teaser-body">
+            <span class="section-label">About Us</span>
+            <h2 id="about-teaser-heading">信州の風土が育む、<br>本物の味を届けたい。</h2>
+            <p>
+              長野県の豊かな自然のなかで、山嵜農園は果樹を育てています。
+              標高の高い土地ならではの寒暖差が、甘みと香りの豊かな果物を生み出します。
+            </p>
+            <p>
+              農薬の使用を必要最低限に抑え、ひとつひとつ丁寧に手で収穫。
+              採れたての新鮮さをそのままお届けすることを大切にしています。
+            </p>
+            <a href="about.html" class="btn btn--outline">農園をもっと知る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BASEショップバナー -->
+    <section class="shop-banner" aria-labelledby="shop-banner-heading">
+      <div class="container">
+        <h2 id="shop-banner-heading">オンラインショップ</h2>
+        <p>BASEショップより、季節の果物をご購入いただけます。</p>
+        <a href="https://yamazaki-noen.base.shop" target="_blank" rel="noopener noreferrer"
+           class="btn btn--accent btn--large">
+          BASEショップで購入する
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <p class="footer-logo">山嵜農園</p>
+          <p class="footer-tagline">長野の大地が育む、旬の果物をお届けします。<br>さくらんぼ・ぶどう・りんご・柿を栽培しています。</p>
+        </div>
+        <nav class="footer-nav" aria-label="フッターナビゲーション">
+          <a href="about.html">農園について</a>
+          <a href="products.html">商品一覧</a>
+          <a href="order.html">ご注文方法</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="legal.html">特定商取引法に基づく表示</a>
+          <a href="privacy.html">プライバシーポリシー</a>
+        </nav>
+      </div>
+      <p class="copyright">&copy; 2025 山嵜農園. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

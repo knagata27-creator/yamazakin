@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="山嵜農園の商品一覧。さくらんぼ・ぶどう・りんご・柿を販売しています。BASEショップよりご購入いただけます。">
+  <title>商品一覧 | 山嵜農園</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">
+        <span class="logo-main">山嵜農園</span>
+        <span class="logo-sub">長野県 果樹農家</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="メインナビゲーション">
+        <ul>
+          <li><a href="about.html">農園について</a></li>
+          <li><a href="products.html">商品一覧</a></li>
+          <li><a href="order.html">ご注文方法</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li>
+            <a href="https://yamazaki-noen.base.shop" target="_blank" rel="noopener noreferrer"
+               class="nav-shop-btn">BASEショップへ</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle"
+              aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="page-hero">
+      <div class="container">
+        <span class="page-hero-label">Products</span>
+        <h1 class="page-hero-title">商品一覧</h1>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="products-intro">
+          <p style="color:var(--color-text-muted);">
+            ご購入はBASEショップからお手続きいただけます。
+            各商品の「BASEで購入する」ボタンよりショップページへお進みください。
+          </p>
+          <div class="mt-32">
+            <a href="https://yamazaki-noen.base.shop" target="_blank" rel="noopener noreferrer"
+               class="btn btn--primary">BASEショップ一覧を見る</a>
+          </div>
+        </div>
+
+        <!-- ============ さくらんぼ ============ -->
+        <div class="product-section" id="cherry">
+          <div class="product-section-inner">
+            <div class="product-image product-color-cherry">
+              <!-- <img src="images/cherry.jpg" alt="山嵜農園のさくらんぼ"> -->
+              <span aria-hidden="true">🍒</span>
+            </div>
+            <div class="product-info">
+              <p class="product-info-label">Cherry</p>
+              <h2 class="product-name">さくらんぼ</h2>
+              <span class="product-season-badge">発送時期：6月〜7月</span>
+              <p class="product-desc">
+                信州の短い夏を告げる、さくらんぼ。
+                甘みと適度な酸味のバランスが美しく、
+                粒の大きさと美しい色合いが自慢です。
+                贈答用・ご家庭用ともにご用意しています。
+              </p>
+              <ul class="product-features">
+                <li>甘みと酸味のバランスが絶妙</li>
+                <li>収穫後すぐに発送（鮮度重視）</li>
+                <li>贈答用化粧箱あり</li>
+                <li>数量限定・ご予約推奨</li>
+              </ul>
+              <a href="https://yamazaki-noen.base.shop/items?category=cherry"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn btn--primary">BASEで購入する</a>
+            </div>
+          </div>
+
+          <!-- BASEウィジェット埋め込みエリア（さくらんぼ） -->
+          <div class="base-widget-area" style="margin-top:40px;">
+            <p class="base-widget-placeholder">
+              ここにBASEの商品ウィジェットを埋め込めます。<br>
+              <small>BASE管理画面 → デザイン → 商品ウィジェット のコードをここに貼り付けてください。</small>
+            </p>
+            <!--
+              BASEウィジェット埋め込みコード（BASE管理画面から取得）
+              例:
+              <script src="https://base.com/widget/..."></script>
+            -->
+          </div>
+        </div>
+
+        <!-- ============ ぶどう ============ -->
+        <div class="product-section" id="grape">
+          <div class="product-section-inner reverse">
+            <div class="product-image product-color-grape">
+              <!-- <img src="images/grape.jpg" alt="山嵜農園のぶどう"> -->
+              <span aria-hidden="true">🍇</span>
+            </div>
+            <div class="product-info">
+              <p class="product-info-label">Grape</p>
+              <h2 class="product-name">ぶどう</h2>
+              <span class="product-season-badge">発送時期：8月〜10月</span>
+              <p class="product-desc">
+                長野の寒暖差が育む、糖度の高いぶどう。
+                品種によって異なる風味や食感をお楽しみください。
+                夏の終わりから秋にかけて順次収穫・発送いたします。
+              </p>
+              <ul class="product-features">
+                <li>長野県産・高糖度品種</li>
+                <li>品種ごとに収穫時期が異なります</li>
+                <li>ご家庭用・贈答用を販売</li>
+                <li>クール便でお届け</li>
+              </ul>
+              <a href="https://yamazaki-noen.base.shop/items?category=grape"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn btn--primary">BASEで購入する</a>
+            </div>
+          </div>
+
+          <div class="base-widget-area" style="margin-top:40px;">
+            <p class="base-widget-placeholder">
+              ここにBASEの商品ウィジェットを埋め込めます。<br>
+              <small>BASE管理画面 → デザイン → 商品ウィジェット のコードをここに貼り付けてください。</small>
+            </p>
+          </div>
+        </div>
+
+        <!-- ============ りんご ============ -->
+        <div class="product-section" id="apple">
+          <div class="product-section-inner">
+            <div class="product-image product-color-apple">
+              <!-- <img src="images/apple.jpg" alt="山嵜農園のりんご"> -->
+              <span aria-hidden="true">🍎</span>
+            </div>
+            <div class="product-info">
+              <p class="product-info-label">Apple</p>
+              <h2 class="product-name">りんご</h2>
+              <span class="product-season-badge">発送時期：10月〜11月</span>
+              <p class="product-desc">
+                信州りんごは全国的にも高い評価を得ています。
+                甘みと酸味のバランス、みずみずしい果汁が特徴。
+                秋の深まりとともに、旬のりんごをお届けします。
+              </p>
+              <ul class="product-features">
+                <li>信州産・甘みと酸味のバランスが絶妙</li>
+                <li>品種ごとに収穫時期が異なります</li>
+                <li>ご家庭用・贈答用を販売</li>
+                <li>長期保存可能（冷蔵）</li>
+              </ul>
+              <a href="https://yamazaki-noen.base.shop/items?category=apple"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn btn--primary">BASEで購入する</a>
+            </div>
+          </div>
+
+          <div class="base-widget-area" style="margin-top:40px;">
+            <p class="base-widget-placeholder">
+              ここにBASEの商品ウィジェットを埋め込めます。<br>
+              <small>BASE管理画面 → デザイン → 商品ウィジェット のコードをここに貼り付けてください。</small>
+            </p>
+          </div>
+        </div>
+
+        <!-- ============ 柿 ============ -->
+        <div class="product-section" id="kaki">
+          <div class="product-section-inner reverse">
+            <div class="product-image product-color-kaki">
+              <!-- <img src="images/kaki.jpg" alt="山嵜農園の柿"> -->
+              <span aria-hidden="true">🟠</span>
+            </div>
+            <div class="product-info">
+              <p class="product-info-label">Persimmon</p>
+              <h2 class="product-name">柿</h2>
+              <span class="product-season-badge">発送時期：10月〜11月</span>
+              <p class="product-desc">
+                秋の実りを代表する柿。長野の澄んだ空気と
+                朝晩の冷え込みが、豊かな甘みを生み出します。
+                ジューシーで柔らかな果肉が特徴です。
+              </p>
+              <ul class="product-features">
+                <li>甘柿・渋抜き柿など品種あり</li>
+                <li>秋の贈答品にも最適</li>
+                <li>ご家庭用・贈答用を販売</li>
+                <li>常温便でお届け</li>
+              </ul>
+              <a href="https://yamazaki-noen.base.shop/items?category=kaki"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn btn--primary">BASEで購入する</a>
+            </div>
+          </div>
+
+          <div class="base-widget-area" style="margin-top:40px;">
+            <p class="base-widget-placeholder">
+              ここにBASEの商品ウィジェットを埋め込めます。<br>
+              <small>BASE管理画面 → デザイン → 商品ウィジェット のコードをここに貼り付けてください。</small>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BASEショップバナー -->
+    <section class="shop-banner" aria-labelledby="shop-cta-heading">
+      <div class="container">
+        <h2 id="shop-cta-heading">すべての商品はBASEショップで</h2>
+        <p>在庫状況・最新情報はBASEショップをご確認ください。</p>
+        <a href="https://yamazaki-noen.base.shop" target="_blank" rel="noopener noreferrer"
+           class="btn btn--accent btn--large">BASEショップを開く</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <p class="footer-logo">山嵜農園</p>
+          <p class="footer-tagline">長野の大地が育む、旬の果物をお届けします。<br>さくらんぼ・ぶどう・りんご・柿を栽培しています。</p>
+        </div>
+        <nav class="footer-nav" aria-label="フッターナビゲーション">
+          <a href="about.html">農園について</a>
+          <a href="products.html">商品一覧</a>
+          <a href="order.html">ご注文方法</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="legal.html">特定商取引法に基づく表示</a>
+          <a href="privacy.html">プライバシーポリシー</a>
+        </nav>
+      </div>
+      <p class="copyright">&copy; 2025 山嵜農園. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
