@@ -1,5 +1,27 @@
 'use strict';
 
+// お知らせバーを data/content.json から動的に表示
+fetch('/data/content.json')
+  .then(function(res) { return res.json(); })
+  .then(function(data) {
+    if (data.notice && data.notice.active && data.notice.text) {
+      var bar  = document.getElementById('notice-bar');
+      var text = document.getElementById('notice-text');
+      if (bar && text) {
+        text.textContent = data.notice.text;
+        bar.removeAttribute('hidden');
+      }
+    }
+  })
+  .catch(function() {});
+
+// 写真ファイルがまだない場合、ブロークン表示を非表示にする
+document.querySelectorAll('img[src]').forEach(function(img) {
+  img.addEventListener('error', function() {
+    this.style.display = 'none';
+  });
+});
+
 const toggle = document.getElementById('menu-toggle');
 const nav    = document.getElementById('site-nav');
 

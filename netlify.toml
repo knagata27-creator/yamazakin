@@ -9,27 +9,37 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    # クリックジャッキング防止
     X-Frame-Options = "DENY"
-    # MIMEタイプスニッフィング防止
     X-Content-Type-Options = "nosniff"
-    # リファラー情報の制御
     Referrer-Policy = "strict-origin-when-cross-origin"
-    # 不要なブラウザ機能の無効化
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
-    # Content Security Policy
-    # BASE ウィジェットを使用する場合は base.com を script-src に追加してください
     Content-Security-Policy = """
       default-src 'self';
-      script-src 'self' https://fonts.googleapis.com;
+      script-src 'self' https://fonts.googleapis.com https://identity.netlify.com;
       style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
       font-src 'self' https://fonts.gstatic.com;
       img-src 'self' data: https:;
-      connect-src 'self';
+      connect-src 'self' https://identity.netlify.com https://*.netlify.com;
       frame-src https://yamazaki-noen.base.shop https://*.base.shop;
       form-action 'self';
       base-uri 'self';
       upgrade-insecure-requests;
+    """
+
+# 管理画面は Decap CMS・Netlify Identity のスクリプトが必要なため CSP を緩和
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Content-Security-Policy = """
+      default-src 'self' https:;
+      script-src 'self' https: 'unsafe-inline' 'unsafe-eval';
+      style-src 'self' https: 'unsafe-inline';
+      img-src 'self' data: https: blob:;
+      font-src 'self' https: data:;
+      connect-src 'self' https:;
+      frame-src 'self' https:;
     """
 
 # キャッシュ設定（CSS・JS・画像は長期キャッシュ）

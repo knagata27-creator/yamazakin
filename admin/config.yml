@@ -1,0 +1,32 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: ja
+
+media_folder: images
+public_folder: /images
+
+collections:
+  - name: settings
+    label: サイト設定
+    files:
+      - name: content
+        label: お知らせ・コンテンツ
+        file: data/content.json
+        format: json
+        fields:
+          - label: お知らせバー
+            name: notice
+            widget: object
+            collapsed: false
+            fields:
+              - label: 表示する
+                name: active
+                widget: boolean
+                default: true
+                hint: "チェックを外すとお知らせバーが非表示になります"
+              - label: お知らせ内容
+                name: text
+                widget: string
+                hint: "トップページ上部に表示される1行のお知らせ文"

@@ -63,11 +63,11 @@
       </div>
     </section>
 
-    <!-- お知らせバー -->
-    <div class="notice-bar">
+    <!-- お知らせバー（data/content.json から動的に表示） -->
+    <div class="notice-bar" id="notice-bar" hidden>
       <div class="container">
         <span class="notice-tag">お知らせ</span>
-        <p>2025年のさくらんぼのご予約受付を開始しました。数量限定ですのでお早めにどうぞ。</p>
+        <p id="notice-text"></p>
       </div>
     </div>
 
@@ -83,34 +83,50 @@
         <div class="fruit-grid" role="list">
           <article class="fruit-card" role="listitem">
             <a href="products.html#cherry" class="fruit-card-link" aria-label="さくらんぼの商品ページへ"></a>
-            <span class="fruit-icon" aria-hidden="true">🍒</span>
-            <p class="fruit-name-jp">さくらんぼ</p>
-            <p class="fruit-name-en">Cherry</p>
-            <span class="fruit-season">6月〜7月</span>
+            <div class="fruit-img">
+              <img src="images/cherry.jpg" alt="さくらんぼ" loading="lazy" width="400" height="300">
+            </div>
+            <div class="fruit-card-body">
+              <p class="fruit-name-jp">さくらんぼ</p>
+              <p class="fruit-name-en">Cherry</p>
+              <span class="fruit-season">6月〜7月</span>
+            </div>
           </article>
 
           <article class="fruit-card" role="listitem">
             <a href="products.html#grape" class="fruit-card-link" aria-label="ぶどうの商品ページへ"></a>
-            <span class="fruit-icon" aria-hidden="true">🍇</span>
-            <p class="fruit-name-jp">ぶどう</p>
-            <p class="fruit-name-en">Grape</p>
-            <span class="fruit-season">8月〜10月</span>
+            <div class="fruit-img">
+              <img src="images/grape.jpg" alt="ぶどう" loading="lazy" width="400" height="300">
+            </div>
+            <div class="fruit-card-body">
+              <p class="fruit-name-jp">ぶどう</p>
+              <p class="fruit-name-en">Grape</p>
+              <span class="fruit-season">8月〜10月</span>
+            </div>
           </article>
 
           <article class="fruit-card" role="listitem">
             <a href="products.html#apple" class="fruit-card-link" aria-label="りんごの商品ページへ"></a>
-            <span class="fruit-icon" aria-hidden="true">🍎</span>
-            <p class="fruit-name-jp">りんご</p>
-            <p class="fruit-name-en">Apple</p>
-            <span class="fruit-season">10月〜11月</span>
+            <div class="fruit-img">
+              <img src="images/apple.jpg" alt="りんご" loading="lazy" width="400" height="300">
+            </div>
+            <div class="fruit-card-body">
+              <p class="fruit-name-jp">りんご</p>
+              <p class="fruit-name-en">Apple</p>
+              <span class="fruit-season">10月〜11月</span>
+            </div>
           </article>
 
           <article class="fruit-card" role="listitem">
             <a href="products.html#kaki" class="fruit-card-link" aria-label="柿の商品ページへ"></a>
-            <span class="fruit-icon" aria-hidden="true">🟠</span>
-            <p class="fruit-name-jp">柿</p>
-            <p class="fruit-name-en">Persimmon</p>
-            <span class="fruit-season">10月〜11月</span>
+            <div class="fruit-img">
+              <img src="images/kaki.jpg" alt="柿" loading="lazy" width="400" height="300">
+            </div>
+            <div class="fruit-card-body">
+              <p class="fruit-name-jp">柿</p>
+              <p class="fruit-name-en">Persimmon</p>
+              <span class="fruit-season">10月〜11月</span>
+            </div>
           </article>
         </div>
       </div>
@@ -121,9 +137,7 @@
       <div class="container">
         <div class="about-teaser">
           <div class="about-teaser-image">
-            <!-- 農園の写真をここに設定してください -->
-            <!-- <img src="images/farm.jpg" alt="山嵜農園の風景"> -->
-            <span>農園の写真</span>
+            <img src="images/farm.jpg" alt="山嵜農園の風景" loading="lazy">
           </div>
           <div class="about-teaser-body">
             <span class="section-label">About Us</span>
@@ -177,5 +191,17 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', function(user) {
+        if (!user) {
+          window.netlifyIdentity.on('login', function() {
+            document.location.href = '/admin/';
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
